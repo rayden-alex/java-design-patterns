@@ -34,7 +34,7 @@ Wikipedia says
 
 Translating our weapon example from above. Here we have the `Weapon` hierarchy
 
-```
+```java
 public interface Weapon {
   void wield();
   void swing();
@@ -109,7 +109,7 @@ public class Hammer implements Weapon {
 
 And the separate enchantment hierarchy
 
-```
+```java
 public interface Enchantment {
   void onActivate();
   void apply();
@@ -155,7 +155,7 @@ public class SoulEatingEnchantment implements Enchantment {
 
 And both the hierarchies in action
 
-```
+```java
 Sword enchantedSword = new Sword(new SoulEatingEnchantment());
 enchantedSword.wield();
 enchantedSword.swing();
@@ -187,6 +187,9 @@ Use the Bridge pattern when
 * changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled.
 * you have a proliferation of classes. Such a class hierarchy indicates the need for splitting an object into two parts. Rumbaugh uses the term "nested generalizations" to refer to such class hierarchies
 * you want to share an implementation among multiple objects (perhaps using reference counting), and this fact should be hidden from the client. A simple example is Coplien's String class, in which multiple objects can share the same string representation.
+
+## Tutorial
+* [Bridge Pattern Tutorial](https://www.journaldev.com/1491/bridge-design-pattern-java)
 
 ## Credits
 

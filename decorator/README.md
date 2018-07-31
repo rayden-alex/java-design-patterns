@@ -36,7 +36,7 @@ Wikipedia says
 
 Let's take the troll example. First of all we have a simple troll implementing the troll interface
 
-```
+```java
 public interface Troll {
   void attack();
   int getAttackPower();
@@ -66,7 +66,7 @@ public class SimpleTroll implements Troll {
 
 Next we want to add club for the troll. We can do it dynamically by using a decorator
 
-```
+```java
 public class ClubbedTroll implements Troll {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ClubbedTroll.class);
@@ -97,7 +97,7 @@ public class ClubbedTroll implements Troll {
 
 Here's the troll in action
 
-```
+```java
 // simple troll
 Troll troll = new SimpleTroll();
 troll.attack(); // The troll tries to grab you!
@@ -115,6 +115,9 @@ Use Decorator
 * To add responsibilities to individual objects dynamically and transparently, that is, without affecting other objects
 * For responsibilities that can be withdrawn
 * When extension by subclassing is impractical. Sometimes a large number of independent extensions are possible and would produce an explosion of subclasses to support every combination. Or a class definition may be hidden or otherwise unavailable for subclassing
+
+## Tutorial
+* [Decorator Pattern Tutorial](https://www.journaldev.com/1540/decorator-design-pattern-in-java-example)
 
 ## Real world examples
  * [java.io.InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html), [java.io.OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html),
